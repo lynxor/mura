@@ -1,0 +1,15 @@
+extends ../main_template
+block title
+    title Villages
+block scripts
+    script(type='text/javascript', src='/public/bundle/village_add.js')
+block content
+    h1 Village add
+    a(href='/village/list') List
+    div(data-bind='with: messages')
+        include ../include/messages
+    #new_village
+        label Name
+        input(type='text', data-bind='value: name')
+
+        a(href='#' data-bind='click: addVillage' class='btn btn-default') Add

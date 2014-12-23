@@ -1,0 +1,5 @@
+div(data-bind='visible: !!loading()') loading ...
+div(data-bind='text: info, visible: !!info()' class='alert alert-success')
+div(class='alert alert-danger', data-bind='visible: errors() && errors().length')
+   ul(data-bind='foreach: errors')
+      li(data-bind='text: $data')

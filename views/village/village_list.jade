@@ -1,0 +1,11 @@
+extends ../main_template
+
+block title
+   title Villages
+
+block content
+    h1 Villages
+    a(href='/village/add') Add
+    ul
+       each village in villages
+         li= village.name

@@ -1,0 +1,19 @@
+extends ../main_template
+
+block title
+   title User add
+block scripts
+   script(type='text/javascript', src='/public/bundle/user_add.js')
+block content
+   h1 Add user
+   div(data-bind='with: messages')
+      include ../include/messages
+   a(href='/user/list') List
+
+   label Name
+   input(type='text', data-bind='value: name')
+
+   label Email
+   input(type='text', data-bind='value: email')
+
+   a(href='#' data-bind='click: addUser' class='btn btn-default') Add User
